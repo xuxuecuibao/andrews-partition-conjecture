@@ -1,0 +1,29 @@
+warning: manifest out of date: source kind (git/path) of dependency 'mathlib' changed; use `lake update mathlib` to update it
+ℹ [2512/2553] Replayed LeanAndrews.LinkedFinite
+info: ././././LeanAndrews/LinkedFinite.lean:46:0: 'LeanAndrews.LinkedFinite.bigEntry' depends on axioms: [propext, Classical.choice, Lean.ofReduceBool, Quot.sound]
+info: ././././LeanAndrews/LinkedFinite.lean:47:0: 'LeanAndrews.LinkedFinite.mediumEntry' depends on axioms: [propext, Classical.choice, Lean.ofReduceBool, Quot.sound]
+info: ././././LeanAndrews/LinkedFinite.lean:48:0: 'LeanAndrews.LinkedFinite.smallEntry' depends on axioms: [propext, Classical.choice, Lean.ofReduceBool, Quot.sound]
+✔ [2544/2553] Built LeanAndrews.FiniteConsequences
+✔ [2545/2553] Built LeanAndrews.EulerIntegral
+✔ [2546/2553] Built LeanAndrews.IntegerEuler
+✔ [2547/2553] Built LeanAndrews.NumericalSteps
+ℹ [2548/2553] Built LeanAndrews.Main
+info: ././././LeanAndrews/Main.lean:58:0: 'LeanAndrews.largeComparison' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: ././././LeanAndrews/Main.lean:59:0: 'LeanAndrews.strengthened' depends on axioms: [propext, Classical.choice, Lean.ofReduceBool, Quot.sound]
+info: ././././LeanAndrews/Main.lean:60:0: 'LeanAndrews.andrews_from_four' depends on axioms: [propext, Classical.choice, Lean.ofReduceBool, Quot.sound]
+info: ././././LeanAndrews/Main.lean:61:0: 'LeanAndrews.andrews' depends on axioms: [propext, Classical.choice, Lean.ofReduceBool, Quot.sound]
+ℹ [2549/2553] Built LeanAndrews.LowExact
+info: ././././LeanAndrews/LowExact.lean:106:0: 'LeanAndrews.LowExact.large' depends on axioms: [propext, Classical.choice, Lean.ofReduceBool, Quot.sound]
+info: ././././LeanAndrews/LowExact.lean:107:0: 'LeanAndrews.LowExact.medium' depends on axioms: [propext, Classical.choice, Lean.ofReduceBool, Quot.sound]
+ℹ [2550/2553] Built LeanAndrews.FiniteHigh
+info: ././././LeanAndrews/FiniteHigh.lean:29:0: 'LeanAndrews.FiniteHigh.high' depends on axioms: [propext, Classical.choice, Lean.ofReduceBool, Quot.sound]
+ℹ [2551/2553] Built LeanAndrews.Unconditional
+info: ././././LeanAndrews/Unconditional.lean:62:0: 'LeanAndrews.Unconditional.entries' depends on axioms: [propext, Classical.choice, Lean.ofReduceBool, Quot.sound]
+info: ././././LeanAndrews/Unconditional.lean:63:0: 'LeanAndrews.Unconditional.strengthened' depends on axioms: [propext, Classical.choice, Lean.ofReduceBool, Quot.sound]
+info: ././././LeanAndrews/Unconditional.lean:64:0: 'LeanAndrews.Unconditional.andrews_from_four' depends on axioms: [propext,
+ Classical.choice,
+ Lean.ofReduceBool,
+ Quot.sound]
+info: ././././LeanAndrews/Unconditional.lean:65:0: 'LeanAndrews.Unconditional.andrews' depends on axioms: [propext, Classical.choice, Lean.ofReduceBool, Quot.sound]
+✔ [2552/2553] Built LeanAndrews
+Build completed successfully.

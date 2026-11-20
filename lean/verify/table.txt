@@ -1,0 +1,8 @@
+h5(4m) - P(m), [100, 65535]: min 22332733 at 100, zeros []
+h11(10m) - P(m), [2, 99]: min 1 at 2, zeros []
+h5(n) - Q*4(n), [8, 399]: min 0 at 8, zeros [8, 10, 12, 16, 17, 18]
+h6(n) - Q*5(n), [10, 499]: min 1 at 10, zeros []
+h7(n) - Q*6(n), [12, 599]: min 1 at 12, zeros []
+h8(n) - Q*7(n), [14, 699]: min 2 at 14, zeros []
+h9(n) - Q*8(n), [16, 799]: min 2 at 16, zeros []
+h10(n) - Q*9(n), [18, 899]: min 3 at 18, zeros []

@@ -1,0 +1,50 @@
+warning: manifest out of date: source kind (git/path) of dependency 'mathlib' changed; use `lake update mathlib` to update it
+def LeanAndrews.ClassicalIdentities : Prop :=
+∀ (d n : ℕ), d = 2 ∨ d = 3 → 1 ≤ n → Andrews.Small.qCount d n = Andrews.Small.QCount d n
+def LeanAndrews.Pentagonal.EulerRecurrence : Prop :=
+∀ (n : ℕ),
+  0 < n → ↑(LeanAndrews.Pentagonal.ordinary n) = LeanAndrews.Pentagonal.eulerSum LeanAndrews.Pentagonal.ordinary n 0 n
+LeanAndrews.andrews : LeanAndrews.Pentagonal.EulerRecurrence →
+  LeanAndrews.ClassicalIdentities →
+    ∀ {d n : ℕ},
+      2 ≤ d →
+        1 ≤ n →
+          Andrews.Small.QCount d n ≤ Andrews.Small.qCount d n ∧
+            (Andrews.Small.qCount d n = Andrews.Small.QCount d n ↔ d = 2 ∨ d = 3 ∨ n ≤ d + 3 ∨ d = 4 ∧ n = 12)
+LeanAndrews.strengthened : LeanAndrews.Pentagonal.EulerRecurrence →
+  ∀ {d n : ℕ},
+    4 ≤ d →
+      1 ≤ n →
+        (n ≠ d + 2 → Andrews.Small.QCount d n ≤ Andrews.Small.hCount (d + 1) n) ∧
+          (n = d + 2 → Andrews.Small.hCount (d + 1) n = 1 ∧ Andrews.Small.qCount d n = 2 ∧ Andrews.Small.QCount d n = 2)
+'LeanAndrews.andrews' depends on axioms: [propext, Classical.choice, Lean.ofReduceBool, Quot.sound]
+'LeanAndrews.strengthened' depends on axioms: [propext, Classical.choice, Lean.ofReduceBool, Quot.sound]
+'LeanAndrews.largeComparison' depends on axioms: [propext, Classical.choice, Quot.sound]
+'LeanAndrews.LinkedFinite.bigEntry' depends on axioms: [propext, Classical.choice, Lean.ofReduceBool, Quot.sound]
+'LeanAndrews.LinkedFinite.mediumEntry' depends on axioms: [propext, Classical.choice, Lean.ofReduceBool, Quot.sound]
+'LeanAndrews.LinkedFinite.smallEntry' depends on axioms: [propext, Classical.choice, Lean.ofReduceBool, Quot.sound]
+'LeanAndrews.CountBasics.sixWeights' depends on axioms: [propext]
+@LeanAndrews.Unconditional.andrews_from_four : ∀ {d n : ℕ},
+  4 ≤ d →
+    1 ≤ n →
+      Andrews.Small.QCount d n ≤ Andrews.Small.qCount d n ∧
+        (Andrews.Small.qCount d n = Andrews.Small.QCount d n ↔ n ≤ d + 3 ∨ d = 4 ∧ n = 12)
+@LeanAndrews.Unconditional.strengthened : ∀ {d n : ℕ},
+  4 ≤ d →
+    1 ≤ n →
+      (n ≠ d + 2 → Andrews.Small.QCount d n ≤ Andrews.Small.hCount (d + 1) n) ∧
+        (n = d + 2 → Andrews.Small.hCount (d + 1) n = 1 ∧ Andrews.Small.qCount d n = 2 ∧ Andrews.Small.QCount d n = 2)
+LeanAndrews.Unconditional.andrews : LeanAndrews.ClassicalIdentities →
+  ∀ {d n : ℕ},
+    2 ≤ d →
+      1 ≤ n →
+        Andrews.Small.QCount d n ≤ Andrews.Small.qCount d n ∧
+          (Andrews.Small.qCount d n = Andrews.Small.QCount d n ↔ d = 2 ∨ d = 3 ∨ n ≤ d + 3 ∨ d = 4 ∧ n = 12)
+'LeanAndrews.Unconditional.entries' depends on axioms: [propext, Classical.choice, Lean.ofReduceBool, Quot.sound]
+'LeanAndrews.Unconditional.andrews_from_four' depends on axioms: [propext,
+ Classical.choice,
+ Lean.ofReduceBool,
+ Quot.sound]
+'LeanAndrews.Unconditional.strengthened' depends on axioms: [propext, Classical.choice, Lean.ofReduceBool, Quot.sound]
+'LeanAndrews.Unconditional.andrews' depends on axioms: [propext, Classical.choice, Lean.ofReduceBool, Quot.sound]
+'LeanAndrews.EulerIntegral.logKernel_integral' depends on axioms: [propext, Classical.choice, Quot.sound]
